@@ -1,0 +1,64 @@
+{
+	"mode": [
+		{
+			"id": 1,
+			"type": "Autonomous",
+			"Data": {
+				"VelocityFPS": 8 
+			}
+		},
+		{
+			"id": 2,
+			"type": "Debug",
+			"Data": {
+				"VelocityFPS": 10 
+			}
+		}
+	],
+	"AUV": {
+		"name": "RoboSub"
+	},
+	"Missions": [
+		{
+			"id": 0,
+			"type": "Gate",
+			"params":[
+				{"name": "waitTime", "value": 1},
+				{"name": "useRelativeWaypoint", "value": true},
+				{"name": "useRelativeWorld", "value": false},
+				{"name": "gateSide", "value": "left"},
+				{"name": "distanceThrough", "value": 10},
+				{"name": "amountToTheSide", "value": 1}
+			]
+		},
+		{
+			"id": 1,
+			"type": "Dice",
+			"params":[
+				{"name": "timeOut", "value": 10},
+				{"name": "useRelativeWaypoint", "value": true},
+				{"name": "useRelativeWorld", "value": false},
+				{"name": "dice#", "value": 5},
+				{"name": "getDistanceAway", "value": 10},
+				{"name": "minEstimates", "value": 10},
+				{"name": "maxEstimates", "value": 100}
+			]
+		},
+		{
+			"id": 2,
+			"type": "Torpedo",
+			"params":[
+				{"name": "waitTime", "value": 10},
+				{"name": "useRelativeWaypoint", "value": true},
+				{"name": "useRelativeWorld", "value": false},
+				{"name": "xOffset#", "value": 2},
+				{"name": "depthOffset#", "value": 3},
+				{"name": "getDistanceAway", "value": 3},
+				{"name": "numOfTries", "value": 0},
+				{"name": "minimumEstimatesRequired", "value": 200},
+				{"name": "pullArm", "value": true},
+				{"name": "torpedoThreshold", "value": 60}
+			]
+		}
+	]	
+}
